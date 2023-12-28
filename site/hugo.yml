@@ -7,6 +7,23 @@ params:
   defaultTheme: light
 paginate: 5
 
+params:
+  assets:
+    disableHLJS: true
+
+pygmentsUseClasses: false
+markup:
+    # goldmark:
+        # renderer:
+            # unsafe: true
+    highlight:
+        # noClasses: false
+        # anchorLineNos: true
+        lineNos: true
+        codeFences: true
+        guessSyntax: false
+        # style: monokai-sublime
+        style: gruvbox
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -14,7 +31,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
-pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
 
 minify:
@@ -112,18 +128,6 @@ params:
     #     minMatchCharLength: 0
     #     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     #     keys: ["title", "permalink", "summary", "content"]
-
-markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        noClasses: false
-        # anchorLineNos: true
-        # codeFences: true
-        # guessSyntax: true
-        # lineNos: true
-        # style: monokai
 
 privacy:
     vimeo:
