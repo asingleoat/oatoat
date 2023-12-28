@@ -3,6 +3,7 @@
 if [ ! -f "env-vars" ]; then
     openssl enc -pbkdf2 -aes-256-cbc -base64 -d -in env-vars.enc -out env-vars
 fi
+source env-vars
 
 cd site
 hugo
