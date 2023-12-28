@@ -8,20 +8,18 @@ let
   }) {};
 
   pkgs = pinnedNixpkgs.pkgs;
-
 in
 pkgs.mkShell {
   buildInputs = [
     pkgs.hugo
     pkgs.killall
+    pkgs.openssl
+    pkgs.passh
   ];
 
   shellHook = ''
-    # Start the Hugo server in the background
     # cd ./site
     # nohup hugo server -D -E --bind=0.0.0.0 --baseURL=http://localhost:1313 &
-
-    # Optionally, open a web browser to preview the site
     # nohup firefox http://localhost:1313 &
   '';
 }
