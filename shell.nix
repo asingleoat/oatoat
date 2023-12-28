@@ -18,6 +18,8 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
+    git config user.name 'oat'
+    git config user.email 'asingleoat@gmail.com'
     # cd ./site
     # nohup hugo server -D -E --bind=0.0.0.0 --baseURL=http://localhost:1313 &
     # nohup firefox http://localhost:1313 &
